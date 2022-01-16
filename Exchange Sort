@@ -29,14 +29,10 @@ def exchange_sort(numbers: List[int]) -> None:
         numbers: the list to sort.
     """
 
-    marker = 0
-# Start from marker + 1
-    for marker in range(len(List)-1):
-        for j in range (marker+1, len(List)):
-            if List[marker] > List[j]:
-                List[j], List[marker] = List[marker], List[j]
-                swap(List, 0,3)
-                print("SMALLER")
+    for marker in range(len(numbers)-1):
+        for j in range (marker+1, len(numbers)):
+            if numbers[marker] > numbers[j]:
+                numbers[j], numbers[marker] = numbers[marker], numbers[j]
 
 def swap(some_list: List[int], a: int, b: int) -> None:
     """Swaps elements of a list given two index locations.
